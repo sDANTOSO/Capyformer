@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://1wn0mtergt3l"]
+
+[ext_resource type="Texture2D" uid="uid://ckn2d7w1y4y7v" path="res://Assets/capybara1.png" id="1_f50pn"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1222560789]
+
+[node name="Capybara1" type="Sprite2D" parent="." unique_id=1709927965]
+position = Vector2(191, 198)
+texture = ExtResource("1_f50pn")

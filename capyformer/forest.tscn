@@ -1,13 +1,142 @@
-[gd_scene format=3 uid="uid://dbdbpbj0qo8aj"]
+[gd_scene format=4 uid="uid://dbdbpbj0qo8aj"]
 
 [ext_resource type="Texture2D" uid="uid://iloofald1ysq" path="res://Assets/forest-ground.png" id="1_lifw2"]
+[ext_resource type="PackedScene" uid="uid://1wn0mtergt3l" path="res://character_body_2d.tscn" id="2_stcry"]
+[ext_resource type="Texture2D" uid="uid://bho7jba1mo8me" path="res://Assets/tree5.png" id="2_vmuxp"]
+[ext_resource type="Texture2D" uid="uid://chl61ia1xvnma" path="res://Assets/tree6.png" id="3_8im6m"]
+[ext_resource type="Texture2D" uid="uid://m0rjwken7jhf" path="res://Assets/tree1.png" id="3_uq144"]
+[ext_resource type="Texture2D" uid="uid://cfxwbssdyc102" path="res://Assets/tree2.png" id="4_mvm06"]
+[ext_resource type="Texture2D" uid="uid://du2q6yf4nkwjw" path="res://Assets/Snow3.png" id="7_dvh0n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vs00g"]
+size = Vector2(153, 156)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ilkqt"]
+radius = 50.537113
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ilkqt"]
 size = Vector2(576, 34.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fu252"]
+size = Vector2(130, 625)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d8dn4"]
+texture = ExtResource("7_dvh0n")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.3381624, -1.2590103, -1.0791512, 3.956892, 0.5395775, 8, 0, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.71943474, -0.71943474, 1.6187286, 3.956892, 0.5395775, 8, 2.877739, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 2.6978807, 2.3381634, 3.5971756, -1.0791531, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.057598, 6.4749146, 1.978445, 5.75548, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 0.5395756, 8, 4.4964676, 5.5756197, 8, 3.4173155, 8, -8, -8, -8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 5.215904, -1.2590103, 1.0791512, 3.956892, -0.5395775, 8, -2.877739, 8, -8, -8, -8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.6978807, 0.5395756, -5.5756197, 5.3957615, -4.6763268, 8, -2.877739, 8, -8, -8, -8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -2.6978807, -4.6763268, -4.6763268, -1.0791531, -8, -8, -8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.057598, 6.4749146, 1.978445, 5.75548, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_ilkqt"]
+physics_layer_0/collision_layer = 7
+physics_layer_0/collision_mask = 15
+sources/0 = SubResource("TileSetAtlasSource_d8dn4")
+
 [node name="forest" type="Node2D" unique_id=1639007653]
 
+[node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=276882621]
+position = Vector2(519, 219)
+
+[node name="Tree1" type="Sprite2D" parent="StaticBody2D7" unique_id=67827353]
+visible = false
+position = Vector2(521, 396)
+scale = Vector2(3, 3)
+texture = ExtResource("3_uq144")
+
+[node name="Tree2" type="Sprite2D" parent="StaticBody2D7" unique_id=848014018]
+position = Vector2(254, 468.99997)
+rotation = 0.031700134
+scale = Vector2(3, 3)
+texture = ExtResource("2_vmuxp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=567286374]
+position = Vector2(239, 377)
+rotation = 2.9105487
+shape = SubResource("RectangleShape2D_vs00g")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=1755417625]
+position = Vector2(519, 219)
+
+[node name="Tree1" type="Sprite2D" parent="StaticBody2D8" unique_id=743203818]
+visible = false
+position = Vector2(521, 396)
+scale = Vector2(3, 3)
+texture = ExtResource("3_uq144")
+
+[node name="Tree2" type="Sprite2D" parent="StaticBody2D8" unique_id=556505612]
+position = Vector2(638, 675)
+rotation = 0.031700134
+scale = Vector2(3, 3)
+texture = ExtResource("2_vmuxp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=997626541]
+position = Vector2(670, 457)
+rotation = 2.9105487
+shape = SubResource("RectangleShape2D_vs00g")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=1296757448]
+position = Vector2(922, 192)
+
+[node name="Tree1" type="Sprite2D" parent="StaticBody2D9" unique_id=1910925346]
+visible = false
+position = Vector2(521, 396)
+scale = Vector2(3, 3)
+texture = ExtResource("3_uq144")
+
+[node name="Tree2" type="Sprite2D" parent="StaticBody2D9" unique_id=98647571]
+position = Vector2(638, 675)
+rotation = 0.031700134
+scale = Vector2(3, 3)
+texture = ExtResource("3_8im6m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" unique_id=332788900]
+position = Vector2(560, 414)
+rotation = -1.5383595
+shape = SubResource("CircleShape2D_ilkqt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D9" unique_id=1381945054]
+position = Vector2(628, 413)
+rotation = -3.076719
+shape = SubResource("CircleShape2D_ilkqt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D9/CollisionShape2D2" unique_id=1083884528]
+position = Vector2(-53.21283, -1.5537109)
+rotation = -3.076719
+shape = SubResource("CircleShape2D_ilkqt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D9/CollisionShape2D2/CollisionShape2D2" unique_id=650506875]
+position = Vector2(-466.73785, 94.17968)
+rotation = -3.076719
+shape = SubResource("CircleShape2D_ilkqt")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=55132491]
+position = Vector2(-26, 356)
+collision_layer = 2
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1142754734]
 position = Vector2(316, 273.25)
@@ -16,3 +145,93 @@ shape = SubResource("RectangleShape2D_ilkqt")
 [node name="ForestGround" type="Sprite2D" parent="StaticBody2D" unique_id=758002252]
 position = Vector2(318, 132)
 texture = ExtResource("1_lifw2")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=28477352]
+position = Vector2(-38, 358)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=716468025]
+position = Vector2(898, 276)
+shape = SubResource("RectangleShape2D_ilkqt")
+
+[node name="ForestGround" type="Sprite2D" parent="StaticBody2D2" unique_id=1824283672]
+position = Vector2(899, 131)
+texture = ExtResource("1_lifw2")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=354988108]
+position = Vector2(530, 358)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1432866484]
+position = Vector2(898, 276)
+shape = SubResource("RectangleShape2D_ilkqt")
+
+[node name="ForestGround" type="Sprite2D" parent="StaticBody2D3" unique_id=1630953362]
+position = Vector2(899, 131)
+texture = ExtResource("1_lifw2")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=902959815]
+position = Vector2(-1156, 356)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=2008305352]
+position = Vector2(898, 276)
+shape = SubResource("RectangleShape2D_ilkqt")
+
+[node name="ForestGround" type="Sprite2D" parent="StaticBody2D5" unique_id=266421642]
+position = Vector2(899, 131)
+texture = ExtResource("1_lifw2")
+
+[node name="CharacterBody2D" parent="." unique_id=1222560789 instance=ExtResource("2_stcry")]
+position = Vector2(281, 221)
+collision_mask = 3
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1745999493]
+position = Vector2(299, 91)
+limit_top = 0
+limit_right = 2120
+limit_bottom = 640
+limit_smoothed = true
+
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D/Camera2D" unique_id=1054602024]
+position = Vector2(1564, 250)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=125825480]
+
+[node name="Tree1" type="Sprite2D" parent="StaticBody2D4" unique_id=10274553]
+position = Vector2(521, 396)
+scale = Vector2(3, 3)
+texture = ExtResource("3_uq144")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=591191092]
+position = Vector2(55, 302.5)
+shape = SubResource("RectangleShape2D_fu252")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=1901779710]
+position = Vector2(616, 172)
+
+[node name="Tree1" type="Sprite2D" parent="StaticBody2D6" unique_id=234067970]
+visible = false
+position = Vector2(521, 396)
+scale = Vector2(3, 3)
+texture = ExtResource("3_uq144")
+
+[node name="Tree2" type="Sprite2D" parent="StaticBody2D6" unique_id=839069252]
+position = Vector2(56, 246)
+rotation = 0.9117572
+scale = Vector2(3, 3)
+texture = ExtResource("4_mvm06")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=2066302060]
+position = Vector2(55, 302.5)
+rotation = 4.0220437
+shape = SubResource("RectangleShape2D_fu252")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=459548842]
+scale = Vector2(3, 3)
+tile_map_data = PackedByteArray("AAAjAAwAAAADAAEAADAjAA0AAAADAAEAAFAkAAwAAAACAAEAADAlAAwAAAABAAAAAAAnAAsAAAABAAAAAAAoAAsAAAACAAAAAGAoAAoAAAADAAAAAGAoAAkAAAAFAAAAAGAmAAsAAAAFAAAAAGAmAAwAAAAAAAAAAAAkAA0AAAAAAAEAAAAlAA0AAAAAAAEAAAAmAA0AAAAAAAEAAAAnAA0AAAAAAAEAAAAnAAwAAAAAAAEAAAAoAAwAAAAAAAEAAAAoAA0AAAAAAAEAAAApAAoAAAAAAAEAAAApAAsAAAAAAAEAAAApAAwAAAAAAAEAAAAqAAwAAAAAAAEAAAAqAA0AAAAAAAEAAAApAA0AAAAAAAEAAAAqAAoAAAAAAAEAAAAqAAsAAAAAAAEAAAApAAkAAAADAAAAAAAqAAkAAAADAAEAADArAAkAAAAAAAAAAGArAAgAAAADAAAAAGArAAcAAAADAAAAAGArAAYAAAADAAEAAFArAAUAAAAEAAAAAGArAAQAAAAFAAAAAGArAAoAAAAAAAAAAAArAAsAAAAAAAAAAAArAAwAAAAAAAAAAAArAA0AAAAAAAAAAAArAA4AAAAAAAAAAAAqAA4AAAAAAAAAAAApAA4AAAAAAAAAAAAoAA4AAAAAAAAAAAAnAA4AAAAAAAAAAAAmAA4AAAAAAAAAAAAlAA4AAAAAAAAAAAAkAA4AAAAAAAAAAAAsAAUAAAAAAAAAAAAsAAYAAAAAAAAAAAAsAAcAAAAAAAAAAAAsAAgAAAAAAAAAAAAsAAkAAAAAAAAAAAAsAAoAAAAAAAAAAAAsAAsAAAAAAAAAAAAsAAwAAAAAAAAAAAAsAA0AAAAAAAAAAAAsAA4AAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ilkqt")
+use_kinematic_bodies = true

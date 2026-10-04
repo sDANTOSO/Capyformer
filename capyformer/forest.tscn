@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dbdbpbj0qo8aj"]
 
+[ext_resource type="Texture2D" uid="uid://doit04d85ogax" path="res://Assets/CSBBackground.png" id="1_d8dn4"]
 [ext_resource type="Texture2D" uid="uid://iloofald1ysq" path="res://Assets/forest-ground.png" id="1_lifw2"]
 [ext_resource type="PackedScene" uid="uid://1wn0mtergt3l" path="res://character_body_2d.tscn" id="2_stcry"]
 [ext_resource type="Texture2D" uid="uid://bho7jba1mo8me" path="res://Assets/tree5.png" id="2_vmuxp"]
@@ -57,6 +58,11 @@ physics_layer_0/collision_mask = 15
 sources/0 = SubResource("TileSetAtlasSource_d8dn4")
 
 [node name="forest" type="Node2D" unique_id=1639007653]
+
+[node name="CsbBackground" type="Sprite2D" parent="." unique_id=1506372771]
+position = Vector2(928, -66)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_d8dn4")
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="." unique_id=276882621]
 position = Vector2(519, 219)
